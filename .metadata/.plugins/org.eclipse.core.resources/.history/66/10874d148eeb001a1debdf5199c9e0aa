@@ -1,0 +1,13 @@
+#include "sram.h"
+#include <stdio.h>
+
+void sram_init(void) {
+	alt_u8 color_index;
+	FILE *bg = NULL;
+	int offset = 0;
+	bg = fopen("zcy.txt","r");
+	while (fscanf(bg, "%d", color_index)) {
+		*(sram_base + offset) = color_index;
+		offset++;
+	}
+}

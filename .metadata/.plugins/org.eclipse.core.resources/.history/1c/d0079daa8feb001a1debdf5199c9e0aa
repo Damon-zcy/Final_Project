@@ -1,0 +1,16 @@
+#include "sram.h"
+#include <stdio.h>
+
+void sram_init(void) {
+	unsigned char color_index;
+	FILE *bg = NULL;
+	int offset = 0;
+	bg = fopen("D:\\ZJU\\Courses\\2020SpringECE385\\Final\\zcy.txt","r");
+	printf("Read Start");
+	while (fscanf(bg, "%c", color_index)) {
+		printf("%02x\n", color_index);
+		while (1) {}
+		*(sram_base + offset) = color_index;
+		offset++;
+	}
+}

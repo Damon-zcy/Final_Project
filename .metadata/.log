@@ -1,0 +1,732 @@
+!SESSION 2020-08-31 13:40:03.060 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2020-08-31 13:40:22.926
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-08-31 13:40:48.029
+!MESSAGE Indexed 'usb_kb' (3 sources, 44 headers) in 1.04 sec: 2,038 declarations; 3,867 references; 9 unresolved inclusions; 0 syntax errors; 55 unresolved names (0.92%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-08-31 13:40:51.106
+!MESSAGE Indexed 'usb_kb_bsp' (80 sources, 154 headers) in 3 sec: 5,237 declarations; 8,376 references; 1 unresolved inclusions; 2 syntax errors; 9 unresolved names (0.066%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 13:43:13.765
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 13:43:15.941
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+!SESSION 2020-08-31 15:55:44.475 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2020-08-31 15:56:10.548
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 15:57:29.260
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 15:57:31.409
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:00:24.157
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:00:24.896
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:00:27.034
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:01:02.160
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:01:02.896
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:01:04.997
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:02:34.510
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:02:35.191
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:02:37.239
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:03:37.429
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:03:38.157
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x128]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:03:40.279
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x128 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-08-31 16:36:28.372
+!MESSAGE Indexed 'usb_kb' (3 sources, 53 headers) in 0.732 sec: 2,092 declarations; 4,039 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:36:49.130
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:36:49.850
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:36:51.938
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:37:59.018
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:38:01.049
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:53:19.842
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 16:53:21.847
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+!SESSION 2020-08-31 18:47:02.571 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/software/quartusprime/intelfpga_lite/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2020-08-31 18:47:19.004
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:50:37.746
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:50:39.803
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:56:07.129
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:56:09.173
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:57:20.176
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:57:20.860
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:57:23.078
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:59:31.613
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:59:32.595
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 18:59:34.747
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:05.225
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:05.933
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:07.990
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:21.066
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:21.789
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:23.820
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:37.258
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:38.005
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:40.125
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:54.765
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:55.502
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:00:57.534
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:01:32.392
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:01:33.108
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:01:35.188
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:04.684
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:05.362
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:07.385
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:35.504
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:36.238
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:38.268
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:49.864
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:50.552
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:02:52.602
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:06.598
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:07.265
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:09.345
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:21.099
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:21.770
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:23.794
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:40.287
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:40.992
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:43.008
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:57.717
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:03:58.443
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:00.456
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:28.593
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:29.308
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:31.331
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:43.387
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:44.103
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:04:46.169
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:16:53.586
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:16:55.663
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:24.042
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:24.740
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:26.844
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:39.652
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:40.349
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:17:42.370
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:19:42.269
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:19:44.309
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:09.612
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:10.312
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:12.337
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:25.511
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:26.237
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:20:28.260
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:21:55.521
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:21:56.195
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:21:58.248
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:22:11.772
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:22:12.457
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:22:14.524
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:34.106
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:34.767
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:36.840
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:49.795
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:50.481
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:23:52.494
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:24:17.761
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:24:18.459
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:24:20.531
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:25:45.298
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:25:47.363
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:03.692
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:04.411
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:06.768
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:18.957
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:19.662
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:21.685
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:36.326
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:37.031
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:39.073
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:53.287
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:53.992
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:26:56.038
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:21.006
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:21.696
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:23.746
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:35.542
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:36.216
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:38.212
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:50.733
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:51.418
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:27:53.457
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:04.391
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:05.091
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:07.115
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:20.097
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:20.774
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:28:22.795
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:22.638
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:23.320
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:25.356
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:41.196
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:41.895
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 19:29:43.981
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:01.648
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:02.465
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:04.474
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:37.524
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:38.225
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:03:40.276
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:04:39.410
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:04:40.110
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:04:42.165
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:28.436
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:29.177
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:31.199
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:41.243
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:41.904
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:05:43.933
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:06:08.656
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:06:10.690
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:06:41.247
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:06:41.923
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:06:44.018
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:27:45.088
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:27:45.759
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:27:47.780
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-08-31 21:28:38.948
+!MESSAGE Indexed 'usb_kb' (4 sources, 60 headers) in 0.875 sec: 2,119 declarations; 4,059 references; 5 unresolved inclusions; 0 syntax errors; 10 unresolved names (0.16%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:28:54.633
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:28:55.297
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:28:57.402
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:29:32.904
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:29:33.606
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:29:35.593
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:12.674
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:13.402
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:15.431
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:56.160
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:56.882
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:30:58.940
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:31:52.843
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:31:53.589
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:31:55.672
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:32:54.412
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:33:00.210
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:33:07.079
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:33:40.185
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:33:40.832
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:33:42.897
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:03.071
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:03.738
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:05.784
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:13.701
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:14.410
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:16.428
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:46.406
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:47.094
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:34:49.059
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:03.519
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:04.235
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:06.276
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:44.232
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:44.951
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:36:47.041
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:37:26.855
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:37:27.553
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:37:29.616
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:41:37.120
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:41:37.818
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:41:39.842
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:43:26.832
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:43:27.550
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:43:29.586
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:43:57.831
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:43:58.529
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:44:00.594
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:46:46.756
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x140]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-08-31 21:46:48.801
+!MESSAGE Executing: [D:/software/quartusprime/intelfpga_lite/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x140 /cygdrive/d/ZJU/Courses/2020SpringECE385/Final/software/usb_kb/usb_kb.elf]

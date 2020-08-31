@@ -1,0 +1,34 @@
+module  ball ( input         Clk,                // 50 MHz clock
+                             Reset,              // Active-high reset signal
+                             frame_clk,          // The clock indicating a new frame (~60Hz)
+               input [9:0]   DrawX, DrawY,       // Current pixel coordinates
+//					input [7:0]   keycode,            // keycode
+//					output [3:0]  LEDG,
+               output logic[23:0]  color             // Whether current pixel belongs to ball or background
+              );
+
+//    parameter [9:0] X_Center = 10'd320;  // Center position on the X axis
+//    parameter [9:0] Y_Center = 10'd240;  // Center position on the Y axis
+    parameter [9:0] X_Min = 10'd0;       // Leftmost point on the X axis
+    parameter [9:0] X_Max = 10'd639;     // Rightmost point on the X axis
+    parameter [9:0] Y_Min = 10'd0;       // Topmost point on the Y axis
+    parameter [9:0] Y_Max = 10'd479;     // Bottommost point on the Y axis
+
+	 logic [18:0] ADDR;
+	 logic [5:0] color_index;
+	 ADDR = DrawY*(X_Max-X_Min+1)+DrawX;
+	 frameRAM readmem(.data_In(0), .write_address(0), .read_address(ADDR), .we(0), .Clk,
+							.data_Out(color_index))
+							
+	 logic [23:0] palette[0:33];
+	 palette = '{24'hFF0000, 24'hF83800, 24'hF0D0B0, 24'h503000, 24'hFFE0A8, 
+					 24'h0058F8, 24'hFCFCFC, 24'hBCBCBC, 24'hA40000, 24'hD82800, 
+					 24'hFC7460, 24'hFCBCB0, 24'hF0BC3C, 24'hAEACAE, 24'h363301, 
+					 24'h6C6C01, 24'hBBBD00, 24'h88D500, 24'h398802, 24'h65B0FF, 
+					 24'h155ED8, 24'h800080, 24'h24188A, 24'h504c43, 24'hdacec4, 
+					 24'h9b9188, 24'hb2b4a7, 24'h81857b, 24'h757881, 24'h182012, 
+					 24'haca9ad, 24'h292914, 24'hbc7464}
+				  
+endmodule
+
+    
