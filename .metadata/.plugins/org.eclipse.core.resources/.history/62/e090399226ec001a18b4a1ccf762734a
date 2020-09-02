@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+#include <enemy.h>
+
+
+void next();

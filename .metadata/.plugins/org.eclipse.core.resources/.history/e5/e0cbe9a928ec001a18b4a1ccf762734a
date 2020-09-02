@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <player.h>
+
+void next(){
+	player.place += player.speed;
+			if(bulletType == 0){
+
+			}
+};
+
+

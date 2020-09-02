@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;usb_kb/FightSystem&apos; to &apos;fight_system&apos;" description="Rename resource &apos;FightSystem&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FightSystem" name="fight_system" stamp="1598943854783" updateReferences="true"/>
+</session>

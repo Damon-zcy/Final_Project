@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include "player.h"
+
+void next(){
+	for (int time;;time++){
+
+	}
+};
+
+
+
+

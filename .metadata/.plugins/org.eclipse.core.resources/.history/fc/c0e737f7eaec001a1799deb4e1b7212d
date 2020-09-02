@@ -1,0 +1,27 @@
+#ifndef ENEMY_H_
+#define ENEMY_H_
+
+struct Enemy{
+	int x;
+	int y;
+	int speed;
+	int lifetime;				// lifetime of the enemy, when it reaches a number, it will disappear
+	unsigned char enemyType;
+	int index;					// enemy index in enemy array
+	int actionFrame;			// action frame, number means different animation
+	unsigned char actionLogicIndex;	// action logic of different types of enemy
+	int collideSize;
+	unsigned char HP;
+};
+
+struct EnemyType{
+	int bulletType;
+	int bulletSpeed;
+	int actionLogic;
+
+};
+
+void enext();
+
+
+#endif

@@ -146,6 +146,10 @@ C_SRCS += io_handler.c
 C_SRCS += main.c
 C_SRCS += usb.c
 C_SRCS += sram.c
+C_SRCS += fight_system/enemy.c
+C_SRCS += fight_system/player.c
+C_SRCS += fight_system/bullet.c
+C_SRCS += fight_system/fightlogic.c
 CXX_SRCS :=
 ASM_SRCS :=
 

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <player.h>
+
+void next(){
+	int time;
+	time++;
+	player.x += player.speed;
+			if(player.bulletType == 0){
+				if (time%5 == 0){
+
+				}
+			}
+};
+
+

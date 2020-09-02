@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include "fightlogic.h"
+#include "usb.h"
+#include <unistd.h>  // usleep
+
+
+
+void getkeycode(){
+	int pressed_up, pressed_left, pressed_down, pressed_right = 0;
+	int keycode = UsbRead(0x051e);
+	usleep(200);
+	int keycode2 = UsbRead(0x0520);
+	switch(){
+	case 0x1A:			// w
+		pressed_up = 1;
+		break;
+	case 0x04:			// a
+		pressed_left = 1;
+		break;
+	case 0x16:			// s
+		pressed_down = 1;
+		break;
+	case 0x07:			// d
+		pressed_right = 1;
+		break;
+	}
+
+}
+
+}

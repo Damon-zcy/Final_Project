@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include "fightlogic.h"
+
+
+void fightlogic(){
+	int keycode = UsbRead(0x051e);
+	int keycode2 = UsbRead(0x0520);
+}

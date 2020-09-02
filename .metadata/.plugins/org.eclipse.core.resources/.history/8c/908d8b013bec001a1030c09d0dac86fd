@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include "enemy.h"
+
+void enext(
+	printf("helloworld");
+	return 0;
+);

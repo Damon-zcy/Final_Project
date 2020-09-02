@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include "fightlogic.h"
+#include "usb.h"
+#include <unistd.h>  // usleep
+
+
+void fightlogic(){
+	while(1){
+		int keycode = UsbRead(0x051e);
+		usleep(200);
+		int keycode2 = UsbRead(0x0520);
+	}
+}

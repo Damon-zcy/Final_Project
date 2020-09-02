@@ -1,0 +1,7 @@
+#include <stdio.h>
+//#include "bullet.h"
+//
+//struct PlayerBulletType pb_type = {'1','2','3'};
+//
+//printf("%c", pb_type);
+printf("Hello World!");

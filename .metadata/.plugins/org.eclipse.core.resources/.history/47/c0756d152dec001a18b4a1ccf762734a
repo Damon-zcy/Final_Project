@@ -1,0 +1,43 @@
+#ifndef PLAYER_H_
+#define PLAYER_H_
+
+struct EnemyBullet{
+	int x;
+	int y;
+	int speed;
+	int lifetime;				// lifetime of the enemy bullet
+	unsigned char enemyBulletType;
+	int index;					// enemy index in enemy bullet array
+	int actionFrame;			// action frame, number means different animation
+	unsigned char actionLogicIndex;
+	int collideSize;
+};
+
+
+struct EnemyBulletType{
+	unsigned char pic;
+	unsigned char actionLogic;	// action logic of different types of enemy bullet
+	unsigned char ATK;			// bullet attack
+};
+
+struct PlayerBullet{
+	int x;
+	int y;
+	int speed;
+	int lifetime;				// lifetime of the enemy bullet
+	unsigned char playerBulletType;
+	int index;					// enemy index in enemy bullet array
+	int actionFrame;			// action frame, number means different animation
+	unsigned char actionLogicIndex;
+	int collideSize;
+};
+
+struct playerBulletType{
+	unsigned char pic;
+	unsigned char actionLogic;	//// action logic of different types of enemy bullet
+	unsigned char ATK;			// bullet attack
+};
+
+
+
+#endif

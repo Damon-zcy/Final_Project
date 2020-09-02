@@ -1,0 +1,8 @@
+#ifndef FIGHTLOGIC_H_
+#define FIGHTLOGIC_H_
+
+void getplayerkeycode();
+void fightlogic();
+
+
+#endif

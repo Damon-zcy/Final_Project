@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="sram" key="selection"/>
+		<item value="#include &quot;system.h&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="USB_KEYBOARD"/>
+			<item value="keycode_base"/>
+			<item value="printf"/>
 			<item value="sram"/>
 			<item value="0xff"/>
 			<item value="oxff"/>

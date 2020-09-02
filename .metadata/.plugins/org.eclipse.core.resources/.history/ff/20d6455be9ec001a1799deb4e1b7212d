@@ -1,0 +1,49 @@
+#ifndef BULLET_H_
+#define BULLET_H_
+
+#include <stdio.h>
+
+struct EnemyBullet{
+	int x;
+	int y;
+	int speed;
+	int lifetime;				// lifetime of the enemy bullet
+	unsigned char enemyBulletType;
+	int index;					// enemy index in enemy bullet array
+	int actionFrame;			// action frame, number means different animation
+	unsigned char actionLogicIndex;
+	int collideSize;
+};
+
+
+struct EnemyBulletType{
+	unsigned char pic;
+	unsigned char actionLogic;	// action logic of different types of enemy bullet
+	unsigned char ATK;			// bullet attack
+};
+
+struct PlayerBullet{
+	int x;
+	int y;
+	int Xmotion;
+	int Ymotion;
+	int lifetime;				// lifetime of the enemy bullet
+	unsigned char playerBulletType;
+	int index;					// enemy index in enemy bullet array
+	int actionFrame;			// action frame, number means different animation
+	unsigned char actionLogicIndex;
+	int collideSize;
+};
+
+struct PlayerBulletType{
+	unsigned char pic;
+	unsigned char actionLogic;	// action logic of different types of enemy bullet
+	unsigned char ATK;			// bullet attack
+};
+
+//static struct PlayerBulletType pb_type = {.pic='1', .actionLogic='2', '3'};
+
+void pbulletcreat();
+void ebulletcreat();
+
+#endif

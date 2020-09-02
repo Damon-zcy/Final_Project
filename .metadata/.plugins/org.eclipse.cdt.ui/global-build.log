@@ -2561,3 +2561,146 @@ D:\ZJU\Courses\2020SpringECE385\Final\software\usb_kb_bsp/HAL/src/alt_instructio
 
 collect2.exe: error: ld returned 1 exit status
 make: *** [usb_kb.elf] Error 1
+16:50:49 **** Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling fight_system/bullet.c to obj/default/fight_system/bullet.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/bullet.o fight_system/bullet.c
+Info: Compiling fight_system/enemy.c to obj/default/fight_system/enemy.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/enemy.o fight_system/enemy.c
+fight_system/enemy.c:3:19: fatal error: enemy.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/fight_system/enemy.o] Error 1
+16:50:51 **** Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+17:55:27 **** Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling fight_system/bullet.c to obj/default/fight_system/bullet.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/bullet.o fight_system/bullet.c
+fight_system/bullet.c:7:8: error: expected declaration specifiers or '...' before string constant
+ printf("Hello World!");
+        ^
+make: *** [obj/default/fight_system/bullet.o] Error 1
+17:55:30 **** Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+17:55:56 **** Incremental Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling fight_system/bullet.c to obj/default/fight_system/bullet.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/bullet.o fight_system/bullet.c
+fight_system/bullet.c:7:8: error: expected declaration specifiers or '...' before string constant
+ printf("Hello World!");
+        ^
+make: *** [obj/default/fight_system/bullet.o] Error 1
+17:55:57 **** Incremental Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+17:56:19 **** Incremental Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling fight_system/bullet.c to obj/default/fight_system/bullet.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/bullet.o fight_system/bullet.c
+Info: Compiling fight_system/enemy.c to obj/default/fight_system/enemy.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/enemy.o fight_system/enemy.c
+Info: Compiling fight_system/player.c to obj/default/fight_system/player.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/player.o fight_system/player.c
+fight_system/player.c: In function 'next':
+fight_system/player.c:7:6: warning: 'time' is used uninitialized in this function [-Wuninitialized]
+  time++;
+      ^
+Info: Compiling sram.c to obj/default/sram.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sram.o sram.c
+sram.c: In function 'sram_init':
+sram.c:8:17: error: 'bg_pic' undeclared (first use in this function)
+  int l = sizeof(bg_pic)/sizeof(bg_pic[0]);
+                 ^
+sram.c:8:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/sram.o] Error 1
+17:56:20 **** Incremental Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+17:58:11 **** Incremental Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:38:2: warning: implicit declaration of function 'sram_init' [-Wimplicit-function-declaration]
+  sram_init();
+  ^
+main.c:41:18: error: 'sram_base' undeclared (first use in this function)
+  printf("%x\n",*(sram_base));
+                  ^
+main.c:41:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/main.o] Error 1
+17:58:12 **** Incremental Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+17:58:52 **** Incremental Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling sram.c to obj/default/sram.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sram.o sram.c
+Info: Linking usb_kb.elf
+nios2-elf-g++  -T'../usb_kb_bsp//linker.x' -msys-crt0='../usb_kb_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../usb_kb_bsp/   -Wl,-Map=usb_kb.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o usb_kb.elf obj/default/fight_system/bullet.o obj/default/fight_system/enemy.o obj/default/fight_system/player.o obj/default/io_handler.o obj/default/main.o obj/default/sram.o obj/default/usb.o -lm -msys-lib=m
+obj/default/main.o: In function `main':
+D:\ZJU\Courses\2020SpringECE385\Final_Project\software\usb_kb/main.c:38: undefined reference to `sram_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [usb_kb.elf] Error 1
+17:58:54 **** Incremental Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]
+21:13:44 **** Incremental Build of configuration Nios II for project usb_kb ****
+make all 
+Info: Building ../usb_kb_bsp/
+D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+[BSP build complete]
+Info: Compiling fight_system/bullet.c to obj/default/fight_system/bullet.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/bullet.o fight_system/bullet.c
+fight_system/bullet.c: In function 'pbulletcreate':
+fight_system/bullet.c:11:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  pbobj->index = getpbulletindex;
+               ^
+fight_system/bullet.c: In function 'ebulletcreate':
+fight_system/bullet.c:24:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  ebobj->index = getebulletindex;
+               ^
+fight_system/bullet.c: In function 'getpbulletindex':
+fight_system/bullet.c:34:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fight_system/bullet.c: In function 'getebulletindex':
+fight_system/bullet.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Compiling fight_system/enemy.c to obj/default/fight_system/enemy.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/enemy.o fight_system/enemy.c
+fight_system/enemy.c: In function 'geteindex':
+fight_system/enemy.c:26:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Compiling fight_system/fightlogic.c to obj/default/fight_system/fightlogic.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/fight_system/fightlogic.o fight_system/fightlogic.c
+fight_system/fightlogic.c:4:17: fatal error: usb.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/fight_system/fightlogic.o] Error 1
+21:13:46 **** Incremental Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+[BSP build complete]

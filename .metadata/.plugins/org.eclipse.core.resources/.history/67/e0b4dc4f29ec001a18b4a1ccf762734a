@@ -1,0 +1,28 @@
+#ifndef ENEMY_H_
+#define ENEMY_H_
+
+struct Enemy{
+	int x;
+	int y;
+	int speed;
+	int lifetime;
+	unsigned char enemyType;
+	int index;					// enemy index in enemy array
+	int bulletType;
+	int bulletSpeed;
+	int action;
+	unsigned char bulletSwitch;
+	int collideSize;
+	unsigned char HP;
+};
+
+struct EnemyType{
+	int bulletType;
+	int action;
+
+};
+
+void enext();
+
+
+#endif

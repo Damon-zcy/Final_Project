@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include "player.h"
+
+
+void playercreat(struct *pobj){
+
+}
+
+void pnext(){
+	player.lifetime++;
+	player.x += player.Xmotion;
+	player.y += player.Ymotion;
+
+};
+
+
+
+

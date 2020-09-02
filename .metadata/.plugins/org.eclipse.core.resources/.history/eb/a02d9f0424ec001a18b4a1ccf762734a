@@ -1,0 +1,16 @@
+#ifndef PLAYER_H_
+#define PLAYER_H_
+
+struct Player{
+	int place;
+	int speed;
+	int lifetime;
+	int bulletType;
+	int action;
+	unsigned char bulletSwitch;
+	int HP;
+}player;
+
+
+
+#endif

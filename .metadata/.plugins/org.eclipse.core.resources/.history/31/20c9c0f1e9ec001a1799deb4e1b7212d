@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include "bullet.h"
+
+void pbulletcreat(struct PlayerBullet *pbobj){
+	pbobj->x = 0;
+	pbobj->y = 0;
+	pbobj->Xmotion = 0;
+	pbobj->Ymotion = 0;
+	pbobj->lifetime = 0;
+	pbobj->index = getpbulletindex;
+	pbobj->collideSize = 0;
+	pbobj->actionFrame = 0;
+	pbobj->collideSize = 5;
+}
+
