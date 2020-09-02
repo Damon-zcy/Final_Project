@@ -73,7 +73,7 @@ module final_top( input               CLOCK_50,
     logic hpi_r, hpi_w, hpi_cs, hpi_reset, WE;
 	 
 	 logic[9:0] DrawX, DrawY;
-	 logic[7:0] color_index[1:0];
+	 logic[7:0] color_index[0:1];
 	 
 	 logic[18:0] WADDR, RADDR;
 	 
@@ -150,7 +150,8 @@ module final_top( input               CLOCK_50,
     // Which signal should be frame_clk?
 //    ball ball_instance(.*, .Reset(Reset_h), .frame_clk(VGA_VS));
     
-//	 getColor color_picker(.*, .Reset(Reset_h), .frame_clk(VGA_VS), .color);
+	 getBGColor color_picker(.*, .Reset(Reset_h), .frame_clk(VGA_VS), .color_index(color_index[0]));
+	 getPlayerColor Pcolor_picker(.*, .Reset(Reset_h), .frame_clk(VGA_VS), .color_index(color_index[1]));
 //	 pic_read color_read(.*, .Reset(Reset_h), .ADDR(read_data), .color_index(pic_out[15:8]), .WR(pic_out[0])); 
 //	 
 //	 ADDR_Controller addr_control(.*, .ADDR(RADDR));

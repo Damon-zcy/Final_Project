@@ -14,7 +14,7 @@
 //-------------------------------------------------------------------------
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
-module  color_mapper ( input        [7:0] color_index,            // Whether current pixel belongs to ball 
+module  color_mapper ( input        [7:0] color_index[0:1],            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
@@ -27,7 +27,7 @@ module  color_mapper ( input        [7:0] color_index,            // Whether cur
     assign VGA_G = Green;
     assign VGA_B = Blue;
     
-	 logic [23:0] color;
+	 logic [23:0] color1, color2;
 	 logic [23:0] palette[0:255];
 	 assign palette =  '{24'h000000,24'h800000,24'h008000,24'h808000,24'h000080,
 								24'h800080,24'h008080,24'hc0c0c0,24'h808080,24'hff0000,
@@ -81,7 +81,14 @@ module  color_mapper ( input        [7:0] color_index,            // Whether cur
 								24'h8a8a8a,24'h949494,24'h9e9e9e,24'ha8a8a8,24'hb2b2b2,
 								24'hbcbcbc,24'hc6c6c6,24'hd0d0d0,24'hdadada,24'he4e4e4,
 								24'heeeeee};
-	 assign color = palette[color_index];
+	 assign color1 = palette[color_index[1]];
+	 assign color2 = palette[color_index[0]];
+	 always_comb
+	 begin
+	 
+	 end
+	 
+	 
     // Assign color based on is_ball signal
     always_comb
     begin
@@ -99,9 +106,18 @@ module  color_mapper ( input        [7:0] color_index,            // Whether cur
 //            Green = 8'h00;
 //            Blue = 8'h7f - {1'b0, DrawX[9:3]};
 //        end
-		Red = color[23:16];
-		Green = color[15:8];
-		Blue = color[7:0];
+		if (color1 != 24'h00FF00) 
+		begin
+			Red = color1[23:16];
+			Green = color1[15:8];
+			Blue = color1[7:0];
+		end
+		else 
+		begin
+			Red = color2[23:16];
+			Green = color2[15:8];
+			Blue = color2[7:0];
+		end
     end 
     
 endmodule

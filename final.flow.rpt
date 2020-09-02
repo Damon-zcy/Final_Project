@@ -1,5 +1,5 @@
 Flow report for final
-Wed Sep 02 20:47:49 2020
+Wed Sep 02 22:42:45 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Sep 02 20:47:44 2020       ;
+; Flow Status                        ; Successful - Wed Sep 02 22:42:38 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final_top                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,414 / 114,480 ( 4 % )                     ;
-;     Total combinational functions  ; 3,676 / 114,480 ( 3 % )                     ;
-;     Dedicated logic registers      ; 2,693 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2811                                        ;
+; Total logic elements               ; 5,811 / 114,480 ( 5 % )                     ;
+;     Total combinational functions  ; 5,053 / 114,480 ( 4 % )                     ;
+;     Dedicated logic registers      ; 2,703 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2821                                        ;
 ; Total pins                         ; 215 / 529 ( 41 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 11,392 / 3,981,312 ( < 1 % )                ;
+; Total memory bits                  ; 164,992 / 3,981,312 ( 4 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/02/2020 20:46:13 ;
+; Start date & time ; 09/02/2020 22:40:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; final               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                      ; Value                                                         ; Default Value ; Entity Name     ; Section Id     ;
 +--------------------------------------+---------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1098225804166.159905077217396                                 ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328259302085.159905761809964                                ; --            ; --              ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                            ; --            ; --              ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                     ; --            ; --              ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; None                                                          ; --            ; --              ; eda_simulation ;
@@ -115,12 +115,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 5014 MB             ; 00:01:04                           ;
-; Fitter               ; 00:00:24     ; 1.0                     ; 5799 MB             ; 00:00:37                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4711 MB             ; 00:00:04                           ;
-; Power Analyzer       ; 00:00:09     ; 1.0                     ; 4932 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 4902 MB             ; 00:00:04                           ;
-; Total                ; 00:01:28     ; --                      ; --                  ; 00:01:59                           ;
+; Analysis & Synthesis ; 00:01:15     ; 1.0                     ; 5027 MB             ; 00:01:40                           ;
+; Fitter               ; 00:00:37     ; 1.0                     ; 5595 MB             ; 00:00:48                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4715 MB             ; 00:00:04                           ;
+; Power Analyzer       ; 00:00:13     ; 1.0                     ; 4916 MB             ; 00:00:13                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 4894 MB             ; 00:00:05                           ;
+; Total                ; 00:02:15     ; --                      ; --                  ; 00:02:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -129,11 +129,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-MITRAML  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-MITRAML  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-MITRAML  ; Windows 10 ; 10.0       ; x86_64         ;
-; Power Analyzer       ; DESKTOP-MITRAML  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-MITRAML  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ZCY-TP25         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ZCY-TP25         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ZCY-TP25         ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; ZCY-TP25         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ZCY-TP25         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
