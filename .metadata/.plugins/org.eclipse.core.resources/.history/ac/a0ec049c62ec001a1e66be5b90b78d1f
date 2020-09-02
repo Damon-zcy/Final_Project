@@ -1,0 +1,14 @@
+#ifndef PICS_H_
+#define PICS_H_
+#include "alt_types.h"
+
+#define BG_WIDTH		320
+#define BG_HEIGHT		240
+
+typedef enum PIC_NAME {
+	Background=0
+} pic_name_t;
+
+void read_image(pic_name_t pic_type, unsigned char* buffer);
+
+#endif

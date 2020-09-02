@@ -24,7 +24,8 @@
 #include "usb.h"
 #include "lcp_cmd.h"
 #include "lcp_data.h"
-#include "sram.h"
+#include "pics.h"
+#include "frame_buffer.h"
 
 
 //----------------------------------------------------------------------------------------//
@@ -34,15 +35,31 @@
 //----------------------------------------------------------------------------------------//
 int main(void)
 {
-	printf("Start\n");
-	sram_init();
-//	*s = 0x0F;
-//	*(s+1) = 0xED;
-	printf("%x\n",*(sram_base));
-	printf("fuck");
-	return 0;
-	IO_init();
 
+	//image_init();
+	unsigned char* s = BUFFER_0_BASE;
+	*s = 0x06;
+	*(s+1) = 0x02;
+	*(s+2) = 0x03;
+	*(s+3) = 0x03;
+	*(s+4) = 0x03;
+	*(s+5) = 0x03;
+	*(s+6) = 0x05;
+	*(s+7) = 0x05;
+	printf("%2x", *(s+6));
+//	s[0] = 0x01;
+//	printf("%x", *((unsigned char*) 0));
+//	image_init();
+//	for (int i = 0; i < SCREEN_HEIGHT; i++)
+//		for (int j =0; j < SCREEN_WIDTH; j++) {
+//			s[i*SCREEN_WIDTH + j] = bg_data[i][j];
+//		}
+//	write_to_ocm(bg_data);
+	return 0;
+//	while(1) {
+//	buffer_init();
+//	buffer_refresh();}
+//	return 0;
 	/*while(1)
 	{
 		IO_write(HPI_MAILBOX,COMM_EXEC_INT);

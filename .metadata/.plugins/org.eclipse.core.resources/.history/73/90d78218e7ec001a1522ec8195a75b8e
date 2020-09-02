@@ -1,0 +1,15 @@
+#ifndef FRAME_BUFFER_H_
+#define FRAME_BUFFER_H_
+
+#include "pics.h"
+
+#define SCREEN_WIDTH		640/2
+#define SCREEN_HEIGHT		480/2
+
+unsigned char buffer[SCREEN_WIDTH][SCREEN_HEIGHT];
+
+void buffer_init();
+
+
+
+#endif

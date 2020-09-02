@@ -146,6 +146,8 @@ C_SRCS += io_handler.c
 C_SRCS += main.c
 C_SRCS += usb.c
 C_SRCS += sram.c
+C_SRCS += pics.c
+C_SRCS += frame_buffer.c
 CXX_SRCS :=
 ASM_SRCS :=
 

@@ -1,0 +1,22 @@
+//module pic_read( input [23:0] ADDR,
+//					  input Clk,
+//					  output [7:0] color_index,
+//					  output WR);
+//
+//logic Readable = 0;			
+//				
+//always_comb //@ (posedge Clk)
+//begin
+//	if (ADDR[23:0]==24'hFFFFFF)
+//		WR = 0;
+//		Readable = 0;
+//	else
+//	begin
+//		Readable = 1;
+//	end
+//end
+//
+//frameRAM readmem(.data_In(0), .write_address(0), .read_address(ADDR[]), .we(0), .Clk,
+//					.data_Out(color_index));
+//					  
+//endmodule

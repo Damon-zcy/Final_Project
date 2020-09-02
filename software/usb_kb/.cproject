@@ -85,4 +85,5 @@
 			<resource resourceType="PROJECT" workspacePath="/usb_kb"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

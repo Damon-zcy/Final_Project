@@ -1,0 +1,30 @@
+#include "frame_buffer.h"
+#include <stdio.h>
+
+void buffer_init() {
+	*ws_base = 0x0000;
+	for (int i = 0; i < SCREEN_WIDTH; i++)
+		for (int j =0; j < SCREEN_HEIGHT; j++) {
+			buffer[i][j] = bg_data[i][j];
+		}
+	write_to_ocm();
+}
+
+void write_to_ocm() {
+	*ws_base = 0x0001;
+
+	for (int i = 0; i < SCREEN_WIDTH; i++)
+		for (int j = 0; j < SCREEN_HEIGHT; j++){
+			unsigned int address = (i*SCREEN_WIDTH + j)&0x00FFFFFF;
+			unsigned int data = bg_data[i][j];
+			data = (data<<24) + address;
+			while ((*input_base)!=0);
+			printf("%2x", *input_base);
+			*output_base = data;
+
+			while ((*input_base)!=1) {}
+
+			*output_base = 0x00FFFFFF;
+		}
+	*ws_base = 0x0000;
+}

@@ -1,17 +1,26 @@
-22:16:39 **** Incremental Build of configuration Nios II for project usb_kb ****
+20:50:06 **** Incremental Build of configuration Nios II for project usb_kb ****
 make all 
 Info: Building ../usb_kb_bsp/
-D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
+D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../usb_kb_bsp/
 [BSP build complete]
-Info: Compiling sram.c to obj/default/sram.o
-nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sram.o sram.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_kb_bsp//HAL/inc -I../usb_kb_bsp/ -I../usb_kb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+In file included from main.c:17:0:
+main.c: In function 'main':
+../usb_kb_bsp/system.h:64:23: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define BUFFER_0_BASE 0x1a8
+                       ^
+main.c:40:21: note: in expansion of macro 'BUFFER_0_BASE'
+  unsigned char* s = BUFFER_0_BASE;
+                     ^
 Info: Linking usb_kb.elf
-nios2-elf-g++  -T'../usb_kb_bsp//linker.x' -msys-crt0='../usb_kb_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../usb_kb_bsp/   -Wl,-Map=usb_kb.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o usb_kb.elf obj/default/io_handler.o obj/default/main.o obj/default/sram.o obj/default/usb.o -lm -msys-lib=m
-../usb_kb_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o): In function `alt_instruction_exception_entry':
-D:\ZJU\Courses\2020SpringECE385\Final\software\usb_kb_bsp/HAL/src/alt_instruction_exception_entry.c:95: warning: Unable to reach (null) (at 0x02039f44) from the global pointer (at 0x0202d7e0) because the offset (51044) is out of the allowed range, -32678 to 32767.
+nios2-elf-g++  -T'../usb_kb_bsp//linker.x' -msys-crt0='../usb_kb_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../usb_kb_bsp/   -Wl,-Map=usb_kb.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o usb_kb.elf obj/default/frame_buffer.o obj/default/io_handler.o obj/default/main.o obj/default/pics.o obj/default/sram.o obj/default/usb.o -lm -msys-lib=m
+nios2-elf-insert usb_kb.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x1b0 --timestamp 1599050663 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "D:/Projects/Final_Project" --jdi D:/Projects/Final_Project/software/usb_kb_bsp/../../final.jdi --sopcinfo D:/Projects/Final_Project/software/usb_kb_bsp/../../nios_system.sopcinfo
+Info: (usb_kb.elf) 375 KBytes program size (code + initialized data).
+Info:              16001 KBytes free for stack + heap.
+Info: Creating usb_kb.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source usb_kb.elf >usb_kb.objdump
+[usb_kb build complete]
 
-collect2.exe: error: ld returned 1 exit status
-make: *** [usb_kb.elf] Error 1
-
-22:16:40 Build Finished (took 1s.325ms)
+20:50:08 Build Finished (took 2s.556ms)
 

@@ -1,6 +1,7 @@
 
 module nios_system (
 	clk_clk,
+	data_request_export,
 	keycode_export,
 	keycode2_export,
 	otg_hpi_address_export,
@@ -27,9 +28,13 @@ module nios_system (
 	sram_UB_N,
 	sram_CE_N,
 	sram_OE_N,
-	sram_WE_N);	
+	sram_WE_N,
+	wdone_export,
+	write_switch_export,
+	buffer_export_new_signal);	
 
 	input		clk_clk;
+	output	[31:0]	data_request_export;
 	output	[15:0]	keycode_export;
 	output	[15:0]	keycode2_export;
 	output	[1:0]	otg_hpi_address_export;
@@ -57,4 +62,7 @@ module nios_system (
 	output		sram_CE_N;
 	output		sram_OE_N;
 	output		sram_WE_N;
+	input	[7:0]	wdone_export;
+	output	[7:0]	write_switch_export;
+	output	[7:0]	buffer_export_new_signal;
 endmodule

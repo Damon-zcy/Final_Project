@@ -7,7 +7,6 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library,Library/Memory Interfaces and Controllers,Library/University Program,Project,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/University Program/Memory" />
- <window width="1920" height="1034" x="0" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="1440" height="920" x="0" y="0" />
 </preferences>

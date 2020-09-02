@@ -4,13 +4,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="altera.tool.Nios2GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">
@@ -97,9 +97,6 @@
 					<entry kind="macro" name="__DEC128_MANT_DIG__" value="34">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__DEC128_MAX_EXP__" value="6145">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__DEC128_MAX__" value="9.999999999999999999999999999999999E6144DL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -107,6 +104,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MIN__" value="1E-6143DL">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__DEC128_SUBNORMAL_MIN__" value="(-307)">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_SUBNORMAL_MIN__" value="0.000000000000000000000000000000001E-6143DL">
@@ -133,9 +133,6 @@
 					<entry kind="macro" name="__DEC32_SUBNORMAL_MIN__" value="0.000001E-95DF">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__DEC64_EPSILON__" value="1E-15DD">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__DEC64_MANT_DIG__" value="16">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -160,13 +157,13 @@
 					<entry kind="macro" name="__DEC_EVAL_METHOD__" value="2">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__ELF__" value="6145">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__ELF__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FINITE_MATH_ONLY__" value="0">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__FLOAT_WORD_ORDER__" value="__ORDER_LITTLE_ENDIAN__">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FLT_DECIMAL_DIG__" value="9">
@@ -310,10 +307,7 @@
 					<entry kind="macro" name="__INTMAX_C(c)" value="c ## LL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__INTMAX_MAX__" value="0x7fffffffffffffffLL">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__INTMAX_TYPE__" value="long long int">
+					<entry kind="macro" name="__INTMAX_TYPE__" value="__ORDER_LITTLE_ENDIAN__">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__INTPTR_MAX__" value="0x7fffffff">
@@ -403,9 +397,6 @@
 					<entry kind="macro" name="__LDBL_MAX__" value="1.7976931348623157e+308L">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__LDBL_MIN_10_EXP__" value="(-307)">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__LDBL_MIN_EXP__" value="(-1021)">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -457,7 +448,10 @@
 					<entry kind="macro" name="__SIG_ATOMIC_MAX__" value="0x7fffffff">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__SIG_ATOMIC_MIN__" value="(-__SIG_ATOMIC_MAX__ - 1)">
+					<entry kind="macro" name="__SIG_ATOMIC_MAX__" value="(-__SIG_ATOMIC_MAX__ - 1)">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__SIG_ATOMIC_TYPE__" value="long long int">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SIG_ATOMIC_TYPE__" value="int">
@@ -500,6 +494,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SIZE_MAX__" value="0xffffffffU">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__SIZE_MAX__" value="0x7fffffffffffffffLL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SIZE_TYPE__" value="unsigned int">
@@ -667,6 +664,9 @@
 					<entry kind="macro" name="__nios2_little_endian__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="nios2" value="1E-15DD">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="nios2" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -675,22 +675,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/nios2-elf">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/nios2-elf">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/backward">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">

@@ -1,0 +1,49 @@
+module BufferIO(
+	input [23:0] WADDR, RADDR,
+	input Clk, Reset,
+	output WE, WDone,
+	output [18:0] write_address, read_address
+)
+
+enum logic[3:0] {
+	Wait,
+	Start_Write,
+	Done
+}WRITE_STATE, NEXT_STATE;
+
+always_comb
+begin
+	NEXT_STATE = WRITE_STATE;
+	unique case (WRITE_STATE)
+		Wait:
+		begin
+			if (ADDR[23:0] == 24'hFFFFFF)
+			begin
+				NEXT_STATE = Wait;
+			end
+			else NEXT_STATE = Start_Write;
+		end
+		Start_Write: NEXT_STATE = Done;
+		Done:
+		begin
+			if (ADDR[23:0] == 24'hFFFFFF) NEXT_STATE = Wait;
+		end
+	endcase
+	
+	WDone = 1'b0;
+	write_address = 0;
+	WE = 0;
+	case (WRITE_STATE)
+		Start_Write:
+		begin
+			WE = 1;
+			write_address = ADDR[18:0];
+		end
+		Done:
+		begin
+			WDone = 1'b1;
+		end
+	endcase
+end
+
+endmodule

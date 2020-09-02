@@ -4,13 +4,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="altera.tool.Nios2GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">
@@ -46,6 +46,9 @@
 					<entry kind="macro" name="__CHAR32_TYPE__" value="long unsigned int">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__CHAR32_TYPE__" value="short int">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__CHAR_BIT__" value="8">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -70,13 +73,13 @@
 					<entry kind="macro" name="__DBL_HAS_QUIET_NAN__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__DBL_HAS_QUIET_NAN__" value="6145">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__DBL_MANT_DIG__" value="53">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DBL_MAX_10_EXP__" value="308">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__DBL_MAX_EXP__" value="1024">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DBL_MAX__" value="((double)1.7976931348623157e+308L)">
@@ -95,9 +98,6 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MANT_DIG__" value="34">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__DEC128_MAX_EXP__" value="6145">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MAX__" value="9.999999999999999999999999999999999E6144DL">
@@ -275,9 +275,6 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__INT16_MAX__" value="0x7fff">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__INT16_TYPE__" value="short int">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__INT32_C(c)" value="c ## L">
@@ -675,22 +672,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/nios2-elf">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/nios2-elf">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/backward">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/nios2-elf/include/c++/5.3.0/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/5.3.0/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="D:/Software/QuartusPrime/intelFPGA_lite/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">
@@ -1995,6 +1992,34 @@
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
 					<resource project-relative-path="HAL/src/alt_find_file.c">
+						<entry kind="includePath" name="/usb_kb_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/usb_kb_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/usb_kb_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
+					<resource project-relative-path="frame_buffer.c">
+						<entry kind="includePath" name="/usb_kb_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/usb_kb_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/usb_kb_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
+					<resource project-relative-path="pics.c">
 						<entry kind="includePath" name="/usb_kb_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>

@@ -4,34 +4,38 @@
 
 `timescale 1 ps / 1 ps
 module nios_system (
-		input  wire        clk_clk,                //             clk.clk
-		output wire [15:0] keycode_export,         //         keycode.export
-		output wire [15:0] keycode2_export,        //        keycode2.export
-		output wire [1:0]  otg_hpi_address_export, // otg_hpi_address.export
-		output wire        otg_hpi_cs_export,      //      otg_hpi_cs.export
-		input  wire [15:0] otg_hpi_data_in_port,   //    otg_hpi_data.in_port
-		output wire [15:0] otg_hpi_data_out_port,  //                .out_port
-		output wire        otg_hpi_r_export,       //       otg_hpi_r.export
-		output wire        otg_hpi_reset_export,   //   otg_hpi_reset.export
-		output wire        otg_hpi_w_export,       //       otg_hpi_w.export
-		input  wire        reset_reset_n,          //           reset.reset_n
-		output wire        sdram_clk_clk,          //       sdram_clk.clk
-		output wire [11:0] sdram_wire_addr,        //      sdram_wire.addr
-		output wire [1:0]  sdram_wire_ba,          //                .ba
-		output wire        sdram_wire_cas_n,       //                .cas_n
-		output wire        sdram_wire_cke,         //                .cke
-		output wire        sdram_wire_cs_n,        //                .cs_n
-		inout  wire [31:0] sdram_wire_dq,          //                .dq
-		output wire [3:0]  sdram_wire_dqm,         //                .dqm
-		output wire        sdram_wire_ras_n,       //                .ras_n
-		output wire        sdram_wire_we_n,        //                .we_n
-		inout  wire [15:0] sram_DQ,                //            sram.DQ
-		output wire [19:0] sram_ADDR,              //                .ADDR
-		output wire        sram_LB_N,              //                .LB_N
-		output wire        sram_UB_N,              //                .UB_N
-		output wire        sram_CE_N,              //                .CE_N
-		output wire        sram_OE_N,              //                .OE_N
-		output wire        sram_WE_N               //                .WE_N
+		output wire [7:0]  buffer_export_new_signal, //   buffer_export.new_signal
+		input  wire        clk_clk,                  //             clk.clk
+		output wire [31:0] data_request_export,      //    data_request.export
+		output wire [15:0] keycode_export,           //         keycode.export
+		output wire [15:0] keycode2_export,          //        keycode2.export
+		output wire [1:0]  otg_hpi_address_export,   // otg_hpi_address.export
+		output wire        otg_hpi_cs_export,        //      otg_hpi_cs.export
+		input  wire [15:0] otg_hpi_data_in_port,     //    otg_hpi_data.in_port
+		output wire [15:0] otg_hpi_data_out_port,    //                .out_port
+		output wire        otg_hpi_r_export,         //       otg_hpi_r.export
+		output wire        otg_hpi_reset_export,     //   otg_hpi_reset.export
+		output wire        otg_hpi_w_export,         //       otg_hpi_w.export
+		input  wire        reset_reset_n,            //           reset.reset_n
+		output wire        sdram_clk_clk,            //       sdram_clk.clk
+		output wire [11:0] sdram_wire_addr,          //      sdram_wire.addr
+		output wire [1:0]  sdram_wire_ba,            //                .ba
+		output wire        sdram_wire_cas_n,         //                .cas_n
+		output wire        sdram_wire_cke,           //                .cke
+		output wire        sdram_wire_cs_n,          //                .cs_n
+		inout  wire [31:0] sdram_wire_dq,            //                .dq
+		output wire [3:0]  sdram_wire_dqm,           //                .dqm
+		output wire        sdram_wire_ras_n,         //                .ras_n
+		output wire        sdram_wire_we_n,          //                .we_n
+		inout  wire [15:0] sram_DQ,                  //            sram.DQ
+		output wire [19:0] sram_ADDR,                //                .ADDR
+		output wire        sram_LB_N,                //                .LB_N
+		output wire        sram_UB_N,                //                .UB_N
+		output wire        sram_CE_N,                //                .CE_N
+		output wire        sram_OE_N,                //                .OE_N
+		output wire        sram_WE_N,                //                .WE_N
+		input  wire [7:0]  wdone_export,             //           wdone.export
+		output wire [7:0]  write_switch_export       //    write_switch.export
 	);
 
 	wire         sdram_pll_c0_clk;                                            // sdram_pll:c0 -> [mm_interconnect_0:sdram_pll_c0_clk, rst_controller_002:clk, sdram:clk]
@@ -47,6 +51,13 @@ module nios_system (
 	wire         nios2_gen2_0_instruction_master_waitrequest;                 // mm_interconnect_0:nios2_gen2_0_instruction_master_waitrequest -> nios2_gen2_0:i_waitrequest
 	wire  [25:0] nios2_gen2_0_instruction_master_address;                     // nios2_gen2_0:i_address -> mm_interconnect_0:nios2_gen2_0_instruction_master_address
 	wire         nios2_gen2_0_instruction_master_read;                        // nios2_gen2_0:i_read -> mm_interconnect_0:nios2_gen2_0_instruction_master_read
+	wire         mm_interconnect_0_buffer_0_aes_slave_chipselect;             // mm_interconnect_0:Buffer_0_AES_Slave_chipselect -> Buffer_0:AVL_CS
+	wire   [7:0] mm_interconnect_0_buffer_0_aes_slave_readdata;               // Buffer_0:AVL_READDATA -> mm_interconnect_0:Buffer_0_AES_Slave_readdata
+	wire   [2:0] mm_interconnect_0_buffer_0_aes_slave_address;                // mm_interconnect_0:Buffer_0_AES_Slave_address -> Buffer_0:AVL_ADDR
+	wire         mm_interconnect_0_buffer_0_aes_slave_read;                   // mm_interconnect_0:Buffer_0_AES_Slave_read -> Buffer_0:AVL_READ
+	wire   [0:0] mm_interconnect_0_buffer_0_aes_slave_byteenable;             // mm_interconnect_0:Buffer_0_AES_Slave_byteenable -> Buffer_0:AVL_BYTE_EN
+	wire         mm_interconnect_0_buffer_0_aes_slave_write;                  // mm_interconnect_0:Buffer_0_AES_Slave_write -> Buffer_0:AVL_WRITE
+	wire   [7:0] mm_interconnect_0_buffer_0_aes_slave_writedata;              // mm_interconnect_0:Buffer_0_AES_Slave_writedata -> Buffer_0:AVL_WRITEDATA
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect;  // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_chipselect -> jtag_uart_0:av_chipselect
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata;    // jtag_uart_0:av_readdata -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_readdata
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest; // jtag_uart_0:av_waitrequest -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_waitrequest
@@ -132,13 +143,49 @@ module nios_system (
 	wire   [1:0] mm_interconnect_0_keycode2_s1_address;                       // mm_interconnect_0:keycode2_s1_address -> keycode2:address
 	wire         mm_interconnect_0_keycode2_s1_write;                         // mm_interconnect_0:keycode2_s1_write -> keycode2:write_n
 	wire  [31:0] mm_interconnect_0_keycode2_s1_writedata;                     // mm_interconnect_0:keycode2_s1_writedata -> keycode2:writedata
+	wire  [31:0] mm_interconnect_0_wdone_s1_readdata;                         // wdone:readdata -> mm_interconnect_0:wdone_s1_readdata
+	wire   [1:0] mm_interconnect_0_wdone_s1_address;                          // mm_interconnect_0:wdone_s1_address -> wdone:address
+	wire         mm_interconnect_0_data_request_s1_chipselect;                // mm_interconnect_0:data_request_s1_chipselect -> data_request:chipselect
+	wire  [31:0] mm_interconnect_0_data_request_s1_readdata;                  // data_request:readdata -> mm_interconnect_0:data_request_s1_readdata
+	wire   [1:0] mm_interconnect_0_data_request_s1_address;                   // mm_interconnect_0:data_request_s1_address -> data_request:address
+	wire         mm_interconnect_0_data_request_s1_write;                     // mm_interconnect_0:data_request_s1_write -> data_request:write_n
+	wire  [31:0] mm_interconnect_0_data_request_s1_writedata;                 // mm_interconnect_0:data_request_s1_writedata -> data_request:writedata
+	wire         mm_interconnect_0_write_switch_s1_chipselect;                // mm_interconnect_0:write_switch_s1_chipselect -> write_switch:chipselect
+	wire  [31:0] mm_interconnect_0_write_switch_s1_readdata;                  // write_switch:readdata -> mm_interconnect_0:write_switch_s1_readdata
+	wire   [1:0] mm_interconnect_0_write_switch_s1_address;                   // mm_interconnect_0:write_switch_s1_address -> write_switch:address
+	wire         mm_interconnect_0_write_switch_s1_write;                     // mm_interconnect_0:write_switch_s1_write -> write_switch:write_n
+	wire  [31:0] mm_interconnect_0_write_switch_s1_writedata;                 // mm_interconnect_0:write_switch_s1_writedata -> write_switch:writedata
 	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper:sender_irq -> nios2_gen2_0:irq
-	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [jtag_uart_0:rst_n, keycode2:reset_n, keycode:reset_n, mm_interconnect_0:jtag_uart_0_reset_reset_bridge_in_reset_reset, otg_hpi_address:reset_n, otg_hpi_cs:reset_n, otg_hpi_data:reset_n, otg_hpi_r:reset_n, otg_hpi_reset:reset_n, otg_hpi_w:reset_n, sram_0:reset]
+	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [Buffer_0:RESET, data_request:reset_n, jtag_uart_0:rst_n, keycode2:reset_n, keycode:reset_n, mm_interconnect_0:Buffer_0_RESET_reset_bridge_in_reset_reset, otg_hpi_address:reset_n, otg_hpi_cs:reset_n, otg_hpi_data:reset_n, otg_hpi_r:reset_n, otg_hpi_reset:reset_n, otg_hpi_w:reset_n, sram_0:reset, wdone:reset_n, write_switch:reset_n]
 	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset, sdram_pll:reset, sysid_qsys_0:reset_n]
 	wire         rst_controller_001_reset_out_reset_req;                      // rst_controller_001:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         nios2_gen2_0_debug_reset_request_reset;                      // nios2_gen2_0:debug_reset_request -> [rst_controller_001:reset_in1, rst_controller_002:reset_in1]
 	wire         rst_controller_002_reset_out_reset;                          // rst_controller_002:reset_out -> [mm_interconnect_0:sdram_reset_reset_bridge_in_reset_reset, sdram:reset_n]
+
+	avalon_aes_interface buffer_0 (
+		.CLK           (clk_clk),                                         //         CLK.clk
+		.RESET         (rst_controller_reset_out_reset),                  //       RESET.reset
+		.AVL_ADDR      (mm_interconnect_0_buffer_0_aes_slave_address),    //   AES_Slave.address
+		.AVL_READDATA  (mm_interconnect_0_buffer_0_aes_slave_readdata),   //            .readdata
+		.AVL_WRITEDATA (mm_interconnect_0_buffer_0_aes_slave_writedata),  //            .writedata
+		.AVL_CS        (mm_interconnect_0_buffer_0_aes_slave_chipselect), //            .chipselect
+		.AVL_BYTE_EN   (mm_interconnect_0_buffer_0_aes_slave_byteenable), //            .byteenable
+		.AVL_READ      (mm_interconnect_0_buffer_0_aes_slave_read),       //            .read
+		.AVL_WRITE     (mm_interconnect_0_buffer_0_aes_slave_write),      //            .write
+		.EXPORT_DATA   (buffer_export_new_signal)                         // EXPORT_DATA.new_signal
+	);
+
+	nios_system_data_request data_request (
+		.clk        (clk_clk),                                      //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),              //               reset.reset_n
+		.address    (mm_interconnect_0_data_request_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_data_request_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_data_request_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_data_request_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_data_request_s1_readdata),   //                    .readdata
+		.out_port   (data_request_export)                           // external_connection.export
+	);
 
 	nios_system_jtag_uart_0 jtag_uart_0 (
 		.clk            (clk_clk),                                                     //               clk.clk
@@ -358,10 +405,29 @@ module nios_system (
 		.address  (mm_interconnect_0_sysid_qsys_0_control_slave_address)   //              .address
 	);
 
+	nios_system_wdone wdone (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_wdone_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_wdone_s1_readdata), //                    .readdata
+		.in_port  (wdone_export)                         // external_connection.export
+	);
+
+	nios_system_write_switch write_switch (
+		.clk        (clk_clk),                                      //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),              //               reset.reset_n
+		.address    (mm_interconnect_0_write_switch_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_write_switch_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_write_switch_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_write_switch_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_write_switch_s1_readdata),   //                    .readdata
+		.out_port   (write_switch_export)                           // external_connection.export
+	);
+
 	nios_system_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                                  (clk_clk),                                                     //                                clk_0_clk.clk
 		.sdram_pll_c0_clk                               (sdram_pll_c0_clk),                                            //                             sdram_pll_c0.clk
-		.jtag_uart_0_reset_reset_bridge_in_reset_reset  (rst_controller_reset_out_reset),                              //  jtag_uart_0_reset_reset_bridge_in_reset.reset
+		.Buffer_0_RESET_reset_bridge_in_reset_reset     (rst_controller_reset_out_reset),                              //     Buffer_0_RESET_reset_bridge_in_reset.reset
 		.nios2_gen2_0_reset_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                          // nios2_gen2_0_reset_reset_bridge_in_reset.reset
 		.sdram_reset_reset_bridge_in_reset_reset        (rst_controller_002_reset_out_reset),                          //        sdram_reset_reset_bridge_in_reset.reset
 		.nios2_gen2_0_data_master_address               (nios2_gen2_0_data_master_address),                            //                 nios2_gen2_0_data_master.address
@@ -376,6 +442,18 @@ module nios_system (
 		.nios2_gen2_0_instruction_master_waitrequest    (nios2_gen2_0_instruction_master_waitrequest),                 //                                         .waitrequest
 		.nios2_gen2_0_instruction_master_read           (nios2_gen2_0_instruction_master_read),                        //                                         .read
 		.nios2_gen2_0_instruction_master_readdata       (nios2_gen2_0_instruction_master_readdata),                    //                                         .readdata
+		.Buffer_0_AES_Slave_address                     (mm_interconnect_0_buffer_0_aes_slave_address),                //                       Buffer_0_AES_Slave.address
+		.Buffer_0_AES_Slave_write                       (mm_interconnect_0_buffer_0_aes_slave_write),                  //                                         .write
+		.Buffer_0_AES_Slave_read                        (mm_interconnect_0_buffer_0_aes_slave_read),                   //                                         .read
+		.Buffer_0_AES_Slave_readdata                    (mm_interconnect_0_buffer_0_aes_slave_readdata),               //                                         .readdata
+		.Buffer_0_AES_Slave_writedata                   (mm_interconnect_0_buffer_0_aes_slave_writedata),              //                                         .writedata
+		.Buffer_0_AES_Slave_byteenable                  (mm_interconnect_0_buffer_0_aes_slave_byteenable),             //                                         .byteenable
+		.Buffer_0_AES_Slave_chipselect                  (mm_interconnect_0_buffer_0_aes_slave_chipselect),             //                                         .chipselect
+		.data_request_s1_address                        (mm_interconnect_0_data_request_s1_address),                   //                          data_request_s1.address
+		.data_request_s1_write                          (mm_interconnect_0_data_request_s1_write),                     //                                         .write
+		.data_request_s1_readdata                       (mm_interconnect_0_data_request_s1_readdata),                  //                                         .readdata
+		.data_request_s1_writedata                      (mm_interconnect_0_data_request_s1_writedata),                 //                                         .writedata
+		.data_request_s1_chipselect                     (mm_interconnect_0_data_request_s1_chipselect),                //                                         .chipselect
 		.jtag_uart_0_avalon_jtag_slave_address          (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //            jtag_uart_0_avalon_jtag_slave.address
 		.jtag_uart_0_avalon_jtag_slave_write            (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),       //                                         .write
 		.jtag_uart_0_avalon_jtag_slave_read             (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),        //                                         .read
@@ -460,7 +538,14 @@ module nios_system (
 		.sram_0_avalon_sram_slave_byteenable            (mm_interconnect_0_sram_0_avalon_sram_slave_byteenable),       //                                         .byteenable
 		.sram_0_avalon_sram_slave_readdatavalid         (mm_interconnect_0_sram_0_avalon_sram_slave_readdatavalid),    //                                         .readdatavalid
 		.sysid_qsys_0_control_slave_address             (mm_interconnect_0_sysid_qsys_0_control_slave_address),        //               sysid_qsys_0_control_slave.address
-		.sysid_qsys_0_control_slave_readdata            (mm_interconnect_0_sysid_qsys_0_control_slave_readdata)        //                                         .readdata
+		.sysid_qsys_0_control_slave_readdata            (mm_interconnect_0_sysid_qsys_0_control_slave_readdata),       //                                         .readdata
+		.wdone_s1_address                               (mm_interconnect_0_wdone_s1_address),                          //                                 wdone_s1.address
+		.wdone_s1_readdata                              (mm_interconnect_0_wdone_s1_readdata),                         //                                         .readdata
+		.write_switch_s1_address                        (mm_interconnect_0_write_switch_s1_address),                   //                          write_switch_s1.address
+		.write_switch_s1_write                          (mm_interconnect_0_write_switch_s1_write),                     //                                         .write
+		.write_switch_s1_readdata                       (mm_interconnect_0_write_switch_s1_readdata),                  //                                         .readdata
+		.write_switch_s1_writedata                      (mm_interconnect_0_write_switch_s1_writedata),                 //                                         .writedata
+		.write_switch_s1_chipselect                     (mm_interconnect_0_write_switch_s1_chipselect)                 //                                         .chipselect
 	);
 
 	nios_system_irq_mapper irq_mapper (

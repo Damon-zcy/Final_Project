@@ -8,9 +8,12 @@
 // If for any reason they are not correctly defined, you can replace these
 // with the addresses you read in Qsys.
 
-#define sram_base				(volatile char*)	SRAM_0_BASE
+#define sram_base				(volatile unsigned char*)	SRAM_0_BASE
+#define request_base			(volatile unsigned int*)	DATA_REQUEST_BASE
+#define pic_base				(volatile unsigned char*)	PICK_DATA_BASE
 
-void sram_init(void);
+
+void sram_read(unsigned char* buffer, int addr_start, int len);
 
 
 #endif

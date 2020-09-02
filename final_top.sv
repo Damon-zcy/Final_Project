@@ -70,10 +70,18 @@ module final_top( input               CLOCK_50,
     
     logic [1:0] hpi_addr;
     logic [15:0] hpi_data_in, hpi_data_out;
-    logic hpi_r, hpi_w, hpi_cs, hpi_reset;
+    logic hpi_r, hpi_w, hpi_cs, hpi_reset, WE;
 	 
 	 logic[9:0] DrawX, DrawY;
-	 logic[23:0] color;
+	 logic[7:0] color_index[1:0];
+	 
+	 logic[18:0] WADDR, RADDR;
+	 
+	 logic [31:0] write_data;
+	 logic [7:0] write_switch;
+	 logic [7:0] wdone;
+	 
+	 logic [7:0] awful;
     
     // Interface between NIOS II and EZ-OTG chip
     hpi_io_intf hpi_io_inst(
@@ -125,7 +133,11 @@ module final_top( input               CLOCK_50,
                              .otg_hpi_cs_export(hpi_cs),
                              .otg_hpi_r_export(hpi_r),
                              .otg_hpi_w_export(hpi_w),
-                             .otg_hpi_reset_export(hpi_reset)
+                             .otg_hpi_reset_export(hpi_reset),
+									  .data_request_export(write_data),
+									  .write_switch_export(write_switch),
+									  .wdone_export(wdone),
+									  .buffer_export_new_signal(awful)
     );
     
     // Use PLL to generate the 25MHZ VGA_CLK.
@@ -133,25 +145,34 @@ module final_top( input               CLOCK_50,
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
     
     // TODO: Fill in the connections for the rest of the modules 
-    VGA_controller vga_controller_instance(.*, .Reset(Reset_h));
+    VGA_controller vga_controller_instance(.*, .Reset(Reset_h), .WS(write_switch));
     
     // Which signal should be frame_clk?
 //    ball ball_instance(.*, .Reset(Reset_h), .frame_clk(VGA_VS));
     
-	 getColor color_picker(.*, .Reset(Reset_h), .frame_clk(VGA_VS), .color);
-	 
+//	 getColor color_picker(.*, .Reset(Reset_h), .frame_clk(VGA_VS), .color);
+//	 pic_read color_read(.*, .Reset(Reset_h), .ADDR(read_data), .color_index(pic_out[15:8]), .WR(pic_out[0])); 
+//	 
+//	 ADDR_Controller addr_control(.*, .ADDR(RADDR));
+//	 
+//	 BufferIO controlBuffer(.*, .WS(write_switch[0]), .Reset(Reset_h), .ADDR(write_data[23:0]), .WE, .WDone(wdone), 
+//									.write_address(WADDR));
+//									
+//	 frameBuffer buffer(.*, .WE, .RE(~write_switch[0]), .data_in(write_data[31:24]), .write_address(WADDR), .read_address(RADDR), 
+//					 .data_out(color_index));
+//	 
     color_mapper color_instance(.*);
     
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode[7:4], HEX1);
-	 HexDriver hex_inst_2 (keycode[11:8], HEX2);
-	 HexDriver hex_inst_3 (keycode[15:12], HEX3);
+    HexDriver hex_inst_0 (awful[3:0], HEX0);
+    HexDriver hex_inst_1 (awful[7:4], HEX1);
+	 HexDriver hex_inst_2 (0, HEX2);
+	 HexDriver hex_inst_3 (0, HEX3);
 	 
-	 HexDriver hex_inst_4 (keycode2[3:0], HEX4);
-    HexDriver hex_inst_5 (keycode2[7:4], HEX5);
-	 HexDriver hex_inst_6 (keycode2[11:8], HEX6);
-	 HexDriver hex_inst_7 (keycode2[15:12], HEX7);
+	 HexDriver hex_inst_4 (write_switch[3:0], HEX4);
+    HexDriver hex_inst_5 (write_switch[7:4], HEX5);
+	 HexDriver hex_inst_6 (write_data[27:24], HEX6);
+	 HexDriver hex_inst_7 (write_data[31:28], HEX7);
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

@@ -4,7 +4,7 @@
  *
  */
 
-module  frameRAM
+module  bgRAM
 (
 		input [7:0] data_In,
 		input [18:0] write_address, read_address,
